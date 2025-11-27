@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 60px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      animation: slideDown 1.2s ease;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background: #fff;
+      color: #2575fc;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    a:hover {
+      background: #2575fc;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>✅ Registration is Successful</h3>
+    <a href="Login.html">Click here to Login</a>
+  </div>
+</body>
+</html>

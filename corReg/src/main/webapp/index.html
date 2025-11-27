@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome | E-Learn Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* --- Global Styling --- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* --- Transparent Overlay Image --- */
+    body::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('https://cdn.dribbble.com/users/1787323/screenshots/15433217/media/7d14e5c208f7d7c83dbcc35a8a8bb3e0.png') center/contain no-repeat;
+        opacity: 0.15;
+        z-index: 0;
+    }
+
+    /* --- Gradient Overlay --- */
+    body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(37,117,252,0.6), rgba(106,17,203,0.6));
+        z-index: 0;
+    }
+
+    /* --- Card Container --- */
+    .container {
+        position: relative;
+        z-index: 1;
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 25px;
+        padding: 50px 60px;
+        text-align: center;
+        box-shadow: 0px 15px 35px rgba(0,0,0,0.3);
+        animation: fadeIn 1.5s ease-in-out;
+        width: 420px;
+    }
+
+    h3 {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #fff;
+        margin-bottom: 25px;
+        text-shadow: 1px 2px 8px rgba(0,0,0,0.4);
+        animation: slideDown 1.2s ease;
+    }
+
+    p {
+        font-size: 16px;
+        color: #e6e6e6;
+        margin-bottom: 35px;
+    }
+
+    /* --- Buttons --- */
+    a {
+        display: inline-block;
+        margin: 12px;
+        padding: 14px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        color: #fff;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        transition: all 0.4s ease;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+    }
+
+    a:hover {
+        transform: translateY(-4px) scale(1.05);
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* --- Animations --- */
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideDown {
+        from {opacity: 0; transform: translateY(-40px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 600px) {
+        .container {
+            width: 90%;
+            padding: 40px 20px;
+        }
+        h3 {
+            font-size: 26px;
+        }
+    }
+</style>
+</head>
+<body>
+
+    
+
+    <!-- Card -->
+    <div class="container">
+        <h3>Welcome to E-Learn Portal</h3>
+        <p>Empowering your learning journey with interactive courses and real-time progress tracking.</p>
+        <a href="Register.html">📝 Register</a>
+        <a href="Login.html">🔑 Login</a>
+    </div>
+
+</body>
+</html>
