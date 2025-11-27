@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration Failed | E-Learn Portal</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* --- Global Styles --- */
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff7a7a, #ffc1c1);
+        overflow: hidden;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('https://cdn-icons-png.flaticon.com/512/1828/1828665.png') center right 15%/20% no-repeat;
+        opacity: 0.15;
+        z-index: 0;
+    }
+
+    body::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255,50,50,0.3), rgba(255,150,150,0.3));
+        z-index: 0;
+    }
+
+    /* --- Glassmorphism Container --- */
+    .container {
+        position: relative;
+        z-index: 1;
+        background: rgba(255,255,255,0.12);
+        backdrop-filter: blur(14px);
+        padding: 45px 55px;
+        border-radius: 25px;
+        text-align: center;
+        width: 380px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .crossmark {
+        font-size: 70px;
+        color: #ff1a1a;
+        display: block;
+        margin-bottom: 20px;
+        animation: pop 0.8s ease-in-out;
+    }
+
+    @keyframes pop {
+        0% { transform: scale(0); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #ff3333;
+        text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
+        animation: shake 0.8s ease-in-out;
+    }
+
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        20% { transform: translateX(-6px); }
+        40% { transform: translateX(6px); }
+        60% { transform: translateX(-6px); }
+        80% { transform: translateX(6px); }
+    }
+
+    /* --- Button --- */
+    .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        transition: all 0.3s ease;
+    }
+
+    .btn i {
+        margin-right: 8px;
+    }
+
+    .btn:hover {
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+
+    @media screen and (max-width: 600px) {
+        .container {
+            width: 90%;
+            padding: 35px 25px;
+        }
+        h3 {
+            font-size: 24px;
+        }
+        .crossmark {
+            font-size: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="crossmark"><i class="fa-solid fa-circle-xmark"></i></div>
+    <h3>Registration Failed</h3>
+    <p>Please fill all required fields correctly and try again.</p>
+    <a href="Register.html" class="btn"><i class="fa-solid fa-user-plus"></i> Retry Registration</a>
+</div>
+
+</body>
+</html>
